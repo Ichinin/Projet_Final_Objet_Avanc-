@@ -7,6 +7,10 @@ public class CompteBancaire {
 	CompteBancaire(String id){
 		this.identifiant = id;
 	}
+	CompteBancaire(String id, int Somme){
+		this.identifiant = id;
+		this.somme = Somme;
+	}
 	
 	void Consulter_compte(){
 		
@@ -19,7 +23,7 @@ public class CompteBancaire {
 	void Deposer_argent(int somme){
 		this.somme += somme;
 		
-		System.out.println("Vous disposez maintenant de la sommme de " + this.somme);
+		System.out.println("Vous avez déposé " + somme+ ". \nVous disposez maintenant de la sommme de " + this.somme);
 		
 	}
 	
@@ -29,7 +33,7 @@ public class CompteBancaire {
 			System.out.println("Vous etes a découvert de " + this.somme + " sur votre compte !");
 		}else{
 			this.somme -= somme;
-			System.out.println("Vous disposez maintenant de la sommme de " + this.somme);	
+			System.out.println("Vous avez retiré " + this.somme+ ". \n Vous disposez maintenant de la sommme de " + this.somme);	
 		}
 
 	}
