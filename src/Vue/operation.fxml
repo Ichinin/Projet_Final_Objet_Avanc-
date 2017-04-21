@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="242.0" prefWidth="503.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vue.OperationController">
+   <children>
+      <TextField fx:id="numCompteField" layoutX="264.0" layoutY="51.0" />
+      <TextField fx:id="montantField" layoutX="264.0" layoutY="118.0" />
+      <Label layoutX="138.0" layoutY="55.0" text="Compte" />
+      <Label layoutX="144.0" layoutY="122.0" text="Montant" />
+      <Button layoutX="163.0" layoutY="187.0" mnemonicParsing="false" onAction="#depot" text="Depot" />
+      <Button layoutX="255.0" layoutY="187.0" mnemonicParsing="false" onAction="#retrait" text="Retrait" />
+      <Button layoutX="350.0" layoutY="187.0" mnemonicParsing="false" onAction="#cancelHandle" text="Annuler" />
+   </children>
+</AnchorPane>
