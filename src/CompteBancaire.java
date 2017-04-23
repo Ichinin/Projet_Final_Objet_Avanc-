@@ -16,17 +16,17 @@ public class CompteBancaire {
 	
 	void Consulter_compte(){
 		
-		String reponse_compte = "Vous etes sur le comte " + this.identifiant + "\nLa somme disponible sur le compte est " + this.somme;
+		String reponse_compte = "Vous etes sur le compte " + this.identifiant + "\nLa somme disponible sur le compte est " + this.somme;
 		System.out.println(reponse_compte);
 		//return reponse_compte;
 		
 	}
 	
 	void Deposer_argent(int somme){
-		this.somme += somme;
-		
 
-		System.out.println("Vous disposez maintenant de la sommme de " + this.somme);
+		System.out.println("Vous disposiez de la sommme de " + this.somme);
+		
+		this.somme += somme;
 
 		System.out.println("Vous avez déposé " + somme+ ". \nVous disposez maintenant de la sommme de " + this.somme);
 
@@ -34,7 +34,7 @@ public class CompteBancaire {
 	}
 	
 	void Retirer_somme(int somme){
-		if (somme<this.somme) {
+		if (somme>this.somme) {
 			this.somme -= somme;
 			System.out.println("Vous etes a découvert de " + this.somme + " sur votre compte !");
 		}else{
