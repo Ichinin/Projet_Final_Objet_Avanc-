@@ -12,6 +12,6 @@
       <Label layoutX="138.0" layoutY="55.0" text="UserName" />
       <Label layoutX="144.0" layoutY="122.0" text="Password" />
       <Button layoutX="254.0" layoutY="187.0" mnemonicParsing="false" onAction="#cancelHandle" text="Cancel" />
-      <Button layoutX="346.0" layoutY="187.0" mnemonicParsing="false" onAction="#authenticate" text="OK" />
+      <Button layoutX="346.0" layoutY="187.0" mnemonicParsing="false" onAction="#OkHandle" text="OK" />
    </children>
 </AnchorPane>
