@@ -1,4 +1,4 @@
-package Vue;
+package operations;
 
 import java.util.ArrayList;
 
@@ -8,7 +8,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
-
+/*
+ * Class de controle des opérations
+ * interface qui appelle les méthodes de CompteBancaire
+ * il enregistre la date et l'heure, l'utilisateur, l'opération, le montant et le compte
+ */
 public class OperationController {
 	@FXML
 	protected TextField numCompteField;
@@ -87,19 +91,17 @@ public class OperationController {
 		
 	}
 	public CompteBancaire AddCompte(String numC)
-	{	
+	{	//ajout d'un nouveau compte à la liste 
 		for(CompteBancaire compte : listeCompte)
 		{
 			if(compte.getNumero().equals(numC))
 			{
-				//System.out.println("trouve");
 				return compte;	
 			}
 		}
 		
 		CompteBancaire cb = new CompteBancaire(numC, 0);
 		listeCompte.add(cb);
-		//System.out.println("new");
 		return cb;
 	}
 

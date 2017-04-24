@@ -1,3 +1,6 @@
+package operations;
+
+import banque.CompteBancaire;
 
 public class Client {
 	

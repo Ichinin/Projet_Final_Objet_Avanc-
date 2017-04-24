@@ -1,17 +1,15 @@
 package securite;
 
-
 import java.util.Optional;
-
 import javafx.scene.control.TextInputDialog;
 
-
+/*
+ * class pour la gestion des authentification
+ */
 
 public class ServiceAuthentification {
 	
 	protected String userName ;
-	
-	
 	
 	public boolean isAuthenticated() {	return getUserName() != null; }
 		

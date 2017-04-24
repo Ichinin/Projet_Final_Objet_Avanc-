@@ -1,45 +1,30 @@
 package Application;
 
 import java.io.IOException;
-import java.util.Optional;
-
-import Vue.OperationController;
+import operations.OperationController;
 import javafx.application.Application;
-
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import securite.ServiceAuthentification;
+/**
+ * projet de fin de session POO
+ * Hiver 2017
+ * @authors : Assil, Nyemo, Rama
+ * sujet : Aspectisation des log 
+ */
 
 public class MainApp extends Application {
 
     private Stage primaryStage;
     private BorderPane rootLayout;
-    
-
    
-   // private ObservableList<Person> personData = FXCollections.observableArrayList();
-
-    /**
-     * Constructor
-     */
     public MainApp() {
-        // Add some sample data
-    	
+      	
         
     }
-
-    /**
-     * Returns the data as an observable list of Persons. 
-     * @return
-     */
-   
-
-    
+ 
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
@@ -47,7 +32,7 @@ public class MainApp extends Application {
 
         initRootLayout();
         showOperation();
-        //showAuthentification();
+       
    
     }
 
@@ -70,20 +55,15 @@ public class MainApp extends Application {
         }
     }
 
-    /**
-     * Shows the person overview inside the root layout.
-     */
-    
-    
     public void showOperation() {
         try {
-            // Load person overview.
+            
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("../Vue/operation.fxml"));
-            AnchorPane personOverview = (AnchorPane) loader.load();
+            loader.setLocation(MainApp.class.getResource("../operations/operation.fxml"));
+            AnchorPane operationOverview = (AnchorPane) loader.load();
 
-            // Set person overview into the center of root layout.
-            rootLayout.setCenter(personOverview);
+            
+            rootLayout.setCenter(operationOverview);
 
             // Give the controller access to the main app.
            OperationController controller = loader.getController();
@@ -98,8 +78,7 @@ public class MainApp extends Application {
     public Stage getPrimaryStage() {
         return primaryStage;
     }
-    
-    
+      
 
     public static void main(String[] args) {
         launch(args);

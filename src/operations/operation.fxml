@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="242.0" prefWidth="503.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vue.OperationController">
+<AnchorPane prefHeight="242.0" prefWidth="503.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="operations.OperationController">
    <children>
       <TextField fx:id="numCompteField" layoutX="264.0" layoutY="51.0" />
       <TextField fx:id="montantField" layoutX="264.0" layoutY="118.0" />
